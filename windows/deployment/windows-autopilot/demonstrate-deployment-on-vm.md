@@ -48,7 +48,7 @@ You'll need the following components to complete this lab:
 |**An account with Azure Active Directory (Azure AD) Premium license**|This guide will describe how to get a free 30-day trial Azure AD Premium subscription that can be used to complete the lab.|
 
 > [!NOTE]
-> The Microsoft Evaluation Center is temporarily unavailable. To access Windows client evaluation media, see [Accessing trials and kits for Windows (Eval Center workaround)](https://techcommunity.microsoft.com/t5/windows-11/accessing-trials-and-kits-for-windows-eval-center-workaround/m-p/3361125).<!-- 6049663 -->
+> To access Windows client evaluation media, see Eval Center workaround(https://www.microsoft.com/en-us/evalcenter/).<!-- 6049663 -->
 
 ## Procedures
 
@@ -208,7 +208,8 @@ Name              SwitchType NetAdapterInterfaceDescription
 ----              ---------- ------------------------------
 AutopilotExternal External   Intel(R) Ethernet Connection (2) I218-LM
 
-PS C:\autopilot&gt; New-VM -Name WindowsAutopilot -MemoryStartupBytes 2GB -BootDevice VHD -NewVHDPath .\VMs\WindowsAutopilot.vhdx -Path .\VMData -NewVHDSizeBytes 80GB -Generation 2 -Switch AutopilotExternal
+PS C:\autopilot&gt; New-VM -Name WindowsAutopilot -MemoryStartupBytes 4GB -BootDevice VHD -NewVHDPath .\VMs\WindowsAutopilot.vhdx -Path .\VMData -NewVHDSizeBytes 80GB -Generation 2 -Switch AutopilotExternal
+PS C:\autopilot&gt; Set-VMProcessor WindowsAutopilot -Count 2
 
 Name             State CPUUsage(%) MemoryAssigned(M) Uptime   Status             Version
 ----             ----- ----------- ----------------- ------   ------             -------
